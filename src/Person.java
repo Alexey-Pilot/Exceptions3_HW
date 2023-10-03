@@ -31,7 +31,6 @@ public class Person {
 
     public Person(String personData) throws LengthException {
         String[] info = personData.split(" ");
-            try {
                 if (info.length != 6)throw new LengthException();
                 ArrayList<String> fullName = new ArrayList<>();
                 for (String string : info) {
@@ -48,8 +47,6 @@ public class Person {
                 this.surname = fullName.get(0);
                 this.name = fullName.get(1);
                 this.patronymic = fullName.get(2);
-            } catch (LengthException e) {
-            }
 
         }
 
@@ -88,4 +85,5 @@ public class Person {
         }
         return true;
     }
+
 }
